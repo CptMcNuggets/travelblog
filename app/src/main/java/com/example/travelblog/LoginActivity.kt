@@ -33,11 +33,7 @@ class LoginActivity: AppCompatActivity() {
         }
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.loginButton.setOnClickListener(object : OnClickListener{
-            override fun onClick(v: View?) {
-                onLoginClicked()
-            }
-        })
+        binding.loginButton.setOnClickListener { onLoginClicked() }
         binding.inputLoginLayout.editText?.addTextChangedListener(createTextWatcher(binding.inputLoginLayout))
         binding.inputPasswordLayout.editText?.addTextChangedListener(createTextWatcher(binding.inputPasswordLayout))
     }

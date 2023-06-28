@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ImageView
+        android:id="@+id/image_main"
+        tools:src="@drawable/sydney_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/post_date"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        tools:text="28 June 2023"
+        app:layout_constraintBottom_toBottomOf="@+id/image_main"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/title_text"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        tools:text="Здарова ебать"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/post_date"
+        app:layout_constraintStart_toStartOf="@+id/post_date"
+        />
+    <ImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        tools:src="@drawable/avatar"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_main"/>
+    <TextView
+        android:id="@+id/author_name"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Долбоеб какой-то"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintStart_toEndOf="@+id/avatar_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_image"/>
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:numStars="5"
+        android:stepSize="0.1"
+        tools:rating="4.4"
+        android:isIndicator="true"
+        app:layout_constraintStart_toEndOf="@id/avatar_image"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar_image"
+        app:layout_constraintTop_toBottomOf="@+id/author_name" />
+    <TextView
+        android:id="@+id/rating_value"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="4.4"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/rating_bar"
+        app:layout_constraintTop_toTopOf="@id/rating_bar"
+        app:layout_constraintBottom_toBottomOf="@id/rating_bar"/>
+    <TextView
+        android:id="@+id/text_views"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        tools:text="(2687 views)"
+        app:layout_constraintBottom_toBottomOf="@id/rating_value"
+        app:layout_constraintStart_toEndOf="@id/rating_value"
+        app:layout_constraintTop_toTopOf="@+id/rating_value" />
+
+    <TextView
+        android:id="@+id/text_body"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        tools:text="Australia is one of the most popular travel destinations in the world."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image" />
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/arrow_back_white_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

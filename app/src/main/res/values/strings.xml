@@ -4,4 +4,6 @@
     <string name="error_login_title">Failed attempt to login</string>
     <string name="error_login_message">Incorrect Login or Password. Please, try again.</string>
     <string name="ok">Ok</string>
+    <string name="sort">Sort</string>
+    <string name="search">Search</string>
 </resources>
